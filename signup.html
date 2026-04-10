@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Signup</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f7fb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 400px;
+            margin: 60px auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="radio"],
+        input[type="checkbox"] {
+            width: auto;
+        }
+
+        span {
+            color: red;
+            font-size: 12px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #6c8cff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4f6fe0;
+        }
+
+        .success {
+            color: green;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .link {
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: #6c8cff;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Create Account</h2>
+
+    <form onsubmit="return validateForm()">
+
+        <label>Full Name</label>
+        <input type="text" id="fullname">
+        <span id="nameError"></span>
+
+        <label>Birthdate</label>
+        <input type="date" id="birthdate">
+        <span id="birthError"></span>
+
+        <label>Sex</label><br>
+        <input type="radio" name="sex"> Male
+        <input type="radio" name="sex"> Female
+        <span id="sexError"></span><br><br>
+
+        <label>Email</label>
+        <input type="text" id="email">
+        <span id="emailError"></span>
+
+        <label>Username</label>
+        <input type="text" id="username">
+        <span id="userError"></span>
+
+        <label>Password</label>
+        <input type="password" id="password">
+        <span id="passError"></span>
+
+        <label>Confirm Password</label>
+        <input type="password" id="confirm">
+        <span id="confirmError"></span>
+
+        <label>Favorite Topic</label>
+        <select id="topic">
+            <option value="">-- choose --</option>
+            <option>Technology</option>
+            <option>Games</option>
+        </select>
+        <span id="topicError"></span>
+
+        <label>Interests</label><br>
+        <input type="checkbox" name="interest"> Coding
+        <input type="checkbox" name="interest"> Design
+        <span id="interestError"></span><br><br>
+
+        <label>How often do you visit?</label><br>
+        <input type="radio" name="freq"> Daily
+        <input type="radio" name="freq"> Weekly
+        <span id="freqError"></span><br><br>
+
+        <button type="submit">Join Us</button>
+
+    </form>
+
+    <p id="successMsg" class="success"></p>
+
+    <!-- LINK TO YOUR MAIN PAGE -->
+    <div class="link">
+        <a href="https://samiramarielacaba-hue.github.io/FINAL-PROJECT/">
+    ← Go to Homepage
+        </a>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
